@@ -1,0 +1,105 @@
+:root {
+  --page-1-color: steelblue;
+  --page-2-color: tan;
+  --page-3-color: teal;
+  --page-4-color: slateblue;
+  --animate-speed: 1s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  color: #fff;
+}
+
+#page-1 {
+  background-color: var(--page-1-color);
+}
+#page-2 {
+  background-color: var(--page-2-color);
+}
+#page-3 {
+  background-color: var(--page-3-color);
+}
+#page-4 {
+  background-color: var(--page-4-color);
+}
+
+.page {
+  /* background-color: rgb(41, 135, 194); */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 4rem;
+}
+
+.page h1 {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+#page-1 h1 {
+  animation: animate-h1 1s ease-in;
+}
+
+@keyframes animate-h1 {
+  0% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.page p {
+  /* text-align: center; */
+  margin: 20px;
+  font-size: 1.3rem;
+  animation: animate-p 1s ease-in;
+}
+
+@keyframes animate-p {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.page div {
+  margin: 20px;
+}
+
+.page div a.btn {
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 20px;
+  transition: all 0.3s ease-in;
+}
+
+.page div a.btn:hover,
+.page div a.btn-dark {
+  background: black;
+  color: white;
+}
+
+.page div a.btn-dark:hover {
+  background: white;
+  color: black;
+}
